@@ -1,0 +1,222 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: #1e1e1e;
+    font-family: sans-serif;
+    color: aliceblue;
+    line-height: 1.6;
+}
+.container{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    padding-top: 20px;
+    margin: auto;
+    /* margin auto helps to put the container in between of body */
+}
+
+.sidebar{
+    background-color: #2a2a2a;
+    height: 90vh;
+    padding: 40px;
+    /* here padding helps in putting white line cut short */
+    position: sticky;
+    top: 40px;
+    /* top seh jitni padding di utne pe stick kara diya */
+}
+.maincontent{
+    background-color:  #2a2a2a;
+    /* height: 90vh; */
+    padding: 20px;
+}
+.profile{
+    text-align: center;
+}
+.profile img{padding: 3px;
+    margin: 5px;
+    border-radius: 50%;
+}
+.profile h2{
+    padding: 8px;
+}
+.profile h3{
+    padding: 3px;
+    color: yellow;
+    border-top : 2px solid #3a3a3a;
+    display: inline-block;
+  background-color: black;
+  font-size: 15px;
+    /* inline block ka border utna hi width gerega jitna text h not whole line */
+}
+.contact{
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid wheat;
+    
+    
+
+}
+.value{
+    text-decoration: none;
+    color: aqua;
+    /* text decoration helps in removing underline here */
+}
+
+.socialmedia{ 
+    border-top:1px solid white;
+  margin-bottom: 20px;
+  padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+#navigation {
+ padding: 30;
+ border-bottom: 2px solid#3a3a3a;
+
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    /* used fex end here */
+  gap: 30px;
+  font-size: 20px;
+  
+}
+/* text decoration etc will work only with nav a {} here a is ancor tag */
+
+nav a{
+    text-decoration: none;
+ color:white;
+ transition: color 0.3s ease;
+}
+#about1 ,nav a:hover{
+    color: yellow;
+}
+
+/* about me */
+.heading{
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.line{
+    width: 50px;
+    height: 5px;
+    background-color: yellow;
+    margin-bottom: 20px;
+}
+.content{
+    text-align: justify;
+    /* used text align justify property here */
+    margin-bottom: 20px;
+}
+.containergrid{
+    display: grid;
+    /* use grid concpt  */
+    grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+    gap: 40px;
+
+}
+.item img{
+    height: 48px;
+    width: 48px;
+    margin: 5px;
+    /* used filter */
+    filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(110%);
+}
+.item{
+    padding: 20px;
+    border: 2px solid #3a3a3a;
+    background-color: #1e1e1e;
+    text-align: center;
+    transition: transform 0.3s ease, boxshadow 0.3 ease;
+}
+.item:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 0px 5px rgba(red, green, blue, alpha);
+
+}
+
+
+/* education */
+.ed2,.ed1{
+    padding-top: 20px;
+    padding-left: 20px;
+    position: relative;
+    padding-bottom: 20px;
+}
+.gola{
+    height: 5px;
+    width: 5px;
+    border: 3px solid yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    /* use z index so gola line k upar aye */
+    z-index: 5;
+}
+#education1{
+    position: relative;
+}
+.bigline{
+    position: absolute;
+    width: 2px;
+    top: 110px;
+ bottom: 0px;
+ border: 2px solid #3a3a3a;
+}
+
+/* portfolio */
+.project-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.project img{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+.card{
+    padding: 20px;
+}
+
+.card h3{
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.card p{
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card span{
+    background-color: rgba(255, 191, 0, 0.1);
+    color: #FFBF00;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+}
+
+@media screen  and (max-width: 1200px){
+    .container{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .sidebar{
+        position: static;
+        height: auto;
+    }
+
+}
+    
